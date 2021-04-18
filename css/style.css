@@ -1183,11 +1183,16 @@ span.flatpickr-weekday {
 	color: #000;
 }
 
-.search-form .row .col.col-3 {
+.search-form .row .col select:disabled, .search-form .row .col input:disabled {
+	opacity: 1;
+	color: #000;
+}
+
+.search-form .row .col.col-1, .search-form .row .col.col-3 {
 	transition: transform 400ms linear;
 }
 
-.search-form .row .col.col-3.alert {
+.search-form .row .col.col-1.alert, .search-form .row .col.col-3.alert {
 	transform: scale(1.1);
 }
 
@@ -1234,7 +1239,7 @@ span.flatpickr-weekday {
 	.search-form .row .col:last-child {
 		margin: 0;
 	}
-	.search-form .row .col.col-3.alert {
+	.search-form .row .col.col-1.alert, .search-form .row .col.col-3.alert {
 		transform: scale(1.025);
 	}
 	.search-form .row .col.col-5 input {

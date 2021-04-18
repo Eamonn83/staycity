@@ -90,7 +90,25 @@ jQuery(document).ready(function($) {
         allowInput:true
     });
 
-    // Force use to pick check in date first
+    // Force user to pick location first
+    function locationFirst(){
+        $('.col-2').click(function(){
+            if($('.apartment-select').attr('disabled')){
+                var target = $('.col-1');
+                target.toggleClass('alert');
+                setTimeout(function(){
+                    target.toggleClass('alert');
+                },450);
+            }
+        });
+        $('.city-select').change(function(){
+            var apartmentSelect = $('.apartment-select');
+            apartmentSelect.attr('disabled',false);
+        });
+    }
+    locationFirst();
+
+    // Force user to pick check in date first
     function checkInFirst(){
         $('.col-4').click(function(){
            if($('#check-out-date').attr('disabled')){

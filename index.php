@@ -12,7 +12,7 @@
                     </div> <!-- .col-1 -->
                     <div class="col col-2">
                         <p><i class="fas fa-city"></i></p>
-                        <select class="apartment-select" name="apartment" required>
+                        <select class="apartment-select" name="apartment" required disabled>
                             <option value="" disabled selected>Any Aparthotel</option>
                         </select>
                     </div> <!-- .col-2 -->

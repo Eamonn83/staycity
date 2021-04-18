@@ -49,9 +49,14 @@
         &::placeholder{
           color:$staycity_black;
         }
+
+        &:disabled{
+          opacity:1;
+          color:$staycity_black;
+        }
       }
 
-      &.col-3{
+      &.col-1,&.col-3{
         transition:transform 400ms linear;
         &.alert{
           transform:scale(1.1);
@@ -99,7 +104,7 @@
         &:last-child{
           margin:0;
         }
-        &.col-3{
+        &.col-1,&.col-3{
           &.alert{
             transform:scale(1.025);
           }
