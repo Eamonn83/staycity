@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
                 cityId = $(this).children(':selected').attr('id');
             cityId = parseInt(cityId);
             anotherItems= [];
-            apartmentSelect.html('<option value="" disabled selected>Any Aparthotel</option>');
+            apartmentSelect.html('<option value="any-apartment" selected>Any Aparthotel</option>');
             $.each( data, function( key, val ) {
                 var cityIDD = val.cityID;
                 if(cityIDD === cityId){
@@ -51,6 +51,37 @@ jQuery(document).ready(function($) {
             });
             apartmentSelect.append(anotherItems);
         });
+
+        // If user selects any aparment, display available apartments
+        function anyApartment(){
+            var target = $('.the-apartment'),
+                targetInner = target.html();
+            if(targetInner === '<strong>Apartment:</strong> Any Apartment'){
+                target.html('<strong>You selected any apartment, the available apartments are:</strong>');
+                var today = new Date(),
+                    cityId = target.attr('id'),
+                    apartmentItems= [];
+                $.each( data, function( key, val ) {
+                    var cityIDD = val.name;
+                    if(cityIDD === cityId){
+                        $.each(val.properties, function(i, j) {
+                            var me = this,
+                                openingDate = me['opening-date'],
+                                hotelDataName = me['data-name'],
+                                hotelName = me.name;
+                            openingDate = new Date(openingDate);
+
+                            // Only add properties with opening dates past today's date
+                            if(openingDate.getTime() < today.getTime()){
+                                apartmentItems.push('<br/><span id="' + hotelDataName + '">- ' + hotelName + '</span>');
+                            }
+                        });
+                    }
+                });
+                target.append(apartmentItems);
+            }
+        }
+        anyApartment();
     });
 
     // Fill Date inputs with Today's and Tomorrow's dates

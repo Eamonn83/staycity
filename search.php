@@ -11,7 +11,7 @@
                 ?>
                 <h2 class="your-options">Here are the options you selected:</h2>
                 <p><strong>City:</strong> <?php echo $city_select; ?></p>
-                <p><strong>Apartment:</strong> <?php echo $apartment_select; ?></p>
+                <p id="<?php echo $_POST['city']; ?>" class="the-apartment"><strong>Apartment:</strong> <?php echo $apartment_select; ?></p>
                 <p><strong>Check in:</strong> <?php echo $check_in_date; ?></p>
                 <p><strong>Check out:</strong> <?php echo $check_out_date; ?></p>
                 <div class="cta">

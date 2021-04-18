@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9faff884-5fb2-47e4-be36-ce8ad4ddf1dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/staycity/sass/maps/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/form/_form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/form/_form.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/search.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +60,7 @@
       <workItem from="1618559707521" duration="5687000" />
       <workItem from="1618569362828" duration="898000" />
       <workItem from="1618575818705" duration="476000" />
-      <workItem from="1618595356653" duration="21770000" />
+      <workItem from="1618595356653" duration="23590000" />
     </task>
     <servers />
   </component>
