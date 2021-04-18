@@ -1,0 +1,133 @@
+@import "flatpickr";
+
+.search-form{
+  margin-top:2em;
+  background:$staycity_white;
+  padding:1em;
+  border-radius:5px;
+  box-shadow:$boxshadow;
+
+  .row{
+    display:flex;
+    justify-content:space-between;
+
+    .col{
+      width:20%;
+      display:flex;
+      border:solid 1px $staycity_grey;
+      border-radius:5px;
+      padding:.5em;
+      margin:0 .5em;
+
+      &:first-child{
+        margin-left:0;
+      }
+
+      &:last-child{
+        margin-right:0;
+      }
+
+      p{
+        margin:0 1em 0 0;
+
+        i{
+          font-size:2em;
+          color:$staycity_yellow;
+        }
+      }
+
+      select, input{
+        background:none;
+        border:0;
+        width:100%;
+        cursor:pointer;
+
+        &:focus{
+          outline:none;
+        }
+
+        &::placeholder{
+          color:$staycity_black;
+        }
+      }
+
+      &.col-3{
+        transition:transform 400ms linear;
+        &.alert{
+          transform:scale(1.1);
+        }
+      }
+
+      &.col-5{
+        transition:all 400ms linear;
+        position:relative;
+        padding:0;
+
+        p{
+          position:absolute;
+          z-index:1;
+          top:.5em;
+          left:.5em;
+        }
+
+        input{
+          transition:color 400ms linear;
+          position:relative;
+          z-index:2;
+        }
+        &:hover{
+          background:$staycity_black;
+          border-color:$staycity_black;
+
+          input{
+           color:$staycity_yellow;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:$query_medium){
+  .search-form{
+    margin-top:4em;
+    .row{
+      flex-wrap:wrap;
+      .col{
+        width:100%;
+        margin:0 0 1em 0;
+        &:last-child{
+          margin:0;
+        }
+        &.col-3{
+          &.alert{
+            transform:scale(1.025);
+          }
+        }
+        &.col-5{
+          input{
+            padding:1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:$query_small){
+  .search-form{
+    margin-top:2em;
+    .row{
+      .col{
+        p{
+          i{
+            font-size:1.25em;
+          }
+        }
+        select, input{
+          font-size:.75em;
+        }
+      }
+    }
+  }
+}

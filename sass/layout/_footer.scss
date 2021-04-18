@@ -1,0 +1,61 @@
+footer{
+  .logo{
+    width:300px;
+    height:200px;
+    position:absolute;
+    bottom:0;
+    right:0;
+
+    img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+  }
+
+  p{
+    text-align:center;
+    margin:0 0 .5em 0;
+  }
+
+  &.footer-fixed{
+    width:100%;
+    position:fixed;
+    bottom:0
+  }
+}
+
+@media screen and (max-width:$query_large){
+  footer{
+    .logo{
+      width:250px;
+      height:167px;
+    }
+  }
+}
+
+@media screen and (max-width:$query_medium){
+  footer{
+    .logo{
+      width:200px;
+      height:133px;
+    }
+  }
+}
+
+@media screen and (max-width:$query_small){
+  footer{
+    margin-top:2em;
+    .logo{
+      width:150px;
+      height:100px;
+      position:relative;
+      bottom:unset;
+      right:unset;
+      margin:0 auto;
+    }
+    p{
+      font-size:.75em;
+    }
+  }
+}

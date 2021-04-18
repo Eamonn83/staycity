@@ -1,0 +1,51 @@
+html{
+  box-sizing:border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing:inherit;
+}
+
+body{
+  color:$staycity_black;
+  background:$staycity_yellow;
+  font-family: 'Montserrat', sans-serif;
+  font-size:16px;
+
+  .container{
+    width:100%;
+    max-width:1300px;
+    margin:0 auto;
+    position:relative;
+    z-index:2;
+    padding:0;
+
+    @media screen and (max-width:$query_large){
+      padding:0 2em;
+    }
+
+    @media screen and (max-width:$query_medium){
+      padding:0 1em;
+    }
+  }
+
+  .content-section{
+    h1,h2{
+      text-align:center;
+      font-size:1.4em;
+      margin-top:0;
+
+      span{
+        font-weight:lighter;
+      }
+    }
+    @media screen and (max-width:$query_small){
+      h1,h2{
+        font-size:.75em;
+      }
+    }
+  }
+}
+
